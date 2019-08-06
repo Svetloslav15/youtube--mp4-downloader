@@ -1,0 +1,19 @@
+<h1 class="text-center text-white my-5 text-shadow">Youtube Downloader</h1>
+<section class="mx-3">
+    <form class="text-center col-lg-6 mx-auto bg-white p-3 mt-5" action="/download" method="post">
+        <div class="md-form mt-3">
+            <input type="text" name="url" id="url" class="form-control">
+            <label for="url">Url</label>
+        </div>
+        <button class="btn blue-gradient btn-rounded btn-block z-depth-0 my-4 waves-effect mx-auto" type="submit">Load
+            Video
+        </button>
+    </form>
+    {{#if file}}
+        <section class="text-center col-lg-6 mx-auto bg-white p-3">
+            <h2>{{file}}</h2>
+            <a href="./videos/{{file}}" download="{{file}}"
+               class="btn aqua-gradient btn-rounded btn-block z-depth-0 my-4 waves-effect mx-auto">Download</a>
+        </section>
+    {{/if}}
+</section>

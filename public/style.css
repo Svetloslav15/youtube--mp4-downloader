@@ -1,0 +1,13 @@
+.bg-picture{
+    background: url("wallpaper.jpg");
+    background-position: center;
+}
+.text-shadow{
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+.box-shadow{
+    box-shadow: -1px 0px 24px 5px rgba(0,0,0,0.75);
+}
+.display-none{
+    display: none;
+}
