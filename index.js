@@ -24,12 +24,8 @@ app.post('/download', (req, res) => {
     let url = req.body.url;
     let video = youtubedl(url, ['--format=18'], {cwd: __dirname});
     video.on('info', function (info) {
-        console.log('Download started');
         let stream = fs.createWriteStream(`./public/videos/${info._filename}`);
         video.pipe(stream);
-        console.log('filename: ' + info._filename);
-        console.log('size: ' + info.size);
-
         stream.on('finish', () => {
             res.render("index", {file: `${info._filename}`});
         });
